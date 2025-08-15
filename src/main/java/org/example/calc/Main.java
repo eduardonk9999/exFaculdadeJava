@@ -1,11 +1,22 @@
 package org.example.calc;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
-        int number01 = 3;
-        int number02 = 3;
-        int number = 4;
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("OPERACOES 1 = +, 2 = -, 3 = *, 4 = /");
+        int escolharOperacao = scanner.nextInt();
+
+        System.out.println("Digite o primeiro valor da operacao");
+        int number01 = scanner.nextInt();
+
+        System.out.println("Digite o segundo valor");
+        int number02 = scanner.nextInt();
+
+        int number = escolharOperacao;
 
         switch (number) {
             case 1:
@@ -32,6 +43,7 @@ public class Main {
                 System.out.println("operacao invalida");
         }
 
+        scanner.close();
 
 
     }
